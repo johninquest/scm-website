@@ -9,15 +9,15 @@ const t = useTranslations(lang);
 <div id="cookie-consent" class="cookie-consent" style="display: none;">
     <div class="cookie-consent__content">
         <div class="cookie-consent__text">
-            <h3 class="cookie-consent__title">Cookie Settings</h3>
+            <h3 class="cookie-consent__title">{t('cookies.title')}</h3>
             <p class="cookie-consent__description">
-                We use cookies to improve your experience and analyze site usage. 
-                <a href="#" class="cookie-consent__link">Learn more about our privacy policy</a>
+                {t('cookies.description')}
+                <a href="#" class="cookie-consent__link">{t('cookies.learn_more')}</a>
             </p>
         </div>
         <div class="cookie-consent__actions">
-            <button id="accept-all-cookies" class="button">Accept All</button>
-            <button id="accept-necessary-cookies" class="button button--secondary">Necessary Only</button>
+            <button id="accept-all-cookies" class="button">{t('cookies.accept_all')}</button>
+            <button id="accept-necessary-cookies" class="button button--secondary">{t('cookies.necessary_only')}</button>
         </div>
     </div>
 </div>

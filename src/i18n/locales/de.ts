@@ -55,7 +55,13 @@ export const de = {
     'solutions.sozialcare.feature4': 'Anpassbar für lokale Compliance-Anforderungen',
     'solutions.cta.title': 'Interessiert, mehr zu erfahren?',
     'solutions.cta.description': 'Wir arbeiten derzeit mit ausgewählten Partnern zusammen, um unsere Plattformen zu entwickeln. Kontaktieren Sie uns, um zu besprechen, wie wir Ihnen helfen können, Ihre Pflegeabläufe zu transformieren.',
-    'solutions.cta.contact': 'Kontaktieren Sie uns', 
+    'solutions.cta.contact': 'Kontaktieren Sie uns',
+    // Cookie consent translations
+    'cookies.title': 'Cookie-Einstellungen',
+    'cookies.description': 'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern und die Nutzung der Website zu analysieren.',
+    'cookies.learn_more': 'Erfahren Sie mehr über unsere Datenschutzrichtlinie',
+    'cookies.accept_all': 'Alle akzeptieren',
+    'cookies.necessary_only': 'Nur erforderliche',
     nav: {
     home: 'Startseite',
     about: 'Über uns',

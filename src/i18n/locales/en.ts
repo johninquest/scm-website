@@ -50,7 +50,13 @@ export const en = {
     'solutions.sozialcare.feature4': 'Customizable for local compliance requirements',
     'solutions.cta.title': 'Interested in learning more?',
     'solutions.cta.description': 'We\'re currently working with select partners to develop our platforms. Get in touch to discuss how we can help transform your care operations.',
-    'solutions.cta.contact': 'Contact Us', 
+    'solutions.cta.contact': 'Contact Us',
+    // Cookie consent translations
+    'cookies.title': 'Cookie Settings',
+    'cookies.description': 'We use cookies to improve your experience and analyze site usage.',
+    'cookies.learn_more': 'Learn more about our privacy policy',
+    'cookies.accept_all': 'Accept All',
+    'cookies.necessary_only': 'Necessary Only',
     nav: {
     home: 'Home',
     about: 'About',
