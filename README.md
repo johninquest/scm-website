@@ -85,10 +85,10 @@ Create a `.env` file in the root directory with your environment variables for a
 
 ## 📧 Contact
 
-- **Email:** hello@sozialcm.de
-- **Company:** Care Software Labs
+- **Email:** sozialcm@johnxlabs.de
+- **Project:** SozialCM
 - **Location:** Würzburg, Germany
 
 ---
 
-**Built by Care Software Labs** - Modular tech, meaningful care.
+**Built as SozialCM** - Modular tech, meaningful care.

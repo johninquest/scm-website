@@ -72,9 +72,9 @@ We're looking for social service professionals who want to:
 
 ---
 
-## **Built by Care Software Labs**
+## **Built by SozialCM**
 *Modular tech, meaningful care.*
 
 **Location:** Würzburg, Germany  
-**Contact:** hello@caresoftwarelabs.com  
+**Contact:** sozialcm@johnxlabs.de  
 **LinkedIn:** 
