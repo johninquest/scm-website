@@ -13,6 +13,7 @@ export const ui = {
     'nav.pricing': 'Pricing',
     'nav.solutions': 'Solutions',
     'nav.about': 'About',
+    'footer.location': 'With ❤️ from Würzburg',
   },
   de: {
     'site.title': 'SozialCM',
@@ -21,5 +22,6 @@ export const ui = {
     'nav.pricing': 'Preise',
     'nav.solutions': 'Lösungen',
     'nav.about': 'Über uns',
+    'footer.location': 'Mit ❤️ aus Würzburg',
   },
 } as const;

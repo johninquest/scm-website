@@ -1,4 +1,8 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const currentYear = new Date().getFullYear();
 ---
 
@@ -18,7 +22,7 @@ const currentYear = new Date().getFullYear();
                 </svg>
             </a>
         </div> -->
-        <p class="footer__text footer__text--love">With ❤️ from Würzburg</p>
+        <p class="footer__text footer__text--love">{t('footer.location')}</p>
     </div>
 </footer>
 
