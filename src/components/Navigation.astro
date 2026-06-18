@@ -16,7 +16,9 @@ const navItems = [
 // Language switcher links - preserve the current path structure
 const getLocalizedPath = (targetLang: string) => {
   const pathWithoutLang = currentPath.replace(/^\/(de|en)/, "") || "/";
-  return `/${targetLang}${pathWithoutLang}`;
+  // Avoid double-slash when pathWithoutLang is "/" (root)
+  const suffix = pathWithoutLang === "/" ? "" : pathWithoutLang;
+  return `/${targetLang}${suffix}`;
 };
 ---
 

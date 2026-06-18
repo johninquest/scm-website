@@ -1,4 +1,6 @@
 ---
-// Redirect to German version or detect browser language
-return Astro.redirect('/de/');
+// Detect browser language and redirect accordingly
+const acceptLang = Astro.request.headers.get('accept-language') || '';
+const prefersGerman = acceptLang.startsWith('de');
+return Astro.redirect(prefersGerman ? '/de/' : '/en/');
 ---
