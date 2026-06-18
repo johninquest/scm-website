@@ -42,8 +42,7 @@ SozialCM is a case management platform that helps professionals in social servic
 │   ├── layouts/
 │   │   └── Layout.astro
 │   ├── pages/
-│   │   ├── de/
-│   │   │   └── index.astro
+│   │   ├── index.astro
 │   │   └── en/
 │   │       └── index.astro
 │   ├── styles/

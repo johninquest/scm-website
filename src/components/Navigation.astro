@@ -1,16 +1,23 @@
 ---
-import { getLangFromUrl, useTranslations } from "../i18n";
+import { getLangFromUrl, useTranslations, defaultLang } from "../i18n";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const currentPath = Astro.url.pathname;
 
+// Build a URL for an internal page, omitting the prefix for the default locale
+// (German pages live at root; English pages are prefixed with /en/).
+const localizedHref = (targetLang: keyof typeof import("../i18n").ui, path: string) => {
+  const normalized = path.startsWith("/") ? path : `/${path}`;
+  return targetLang === defaultLang ? normalized : `/${targetLang}${normalized}`;
+};
+
 // Build navigation items with proper language paths
 const navItems = [
-  { href: `/${lang}`, label: t("nav.home") },
-  { href: `/${lang}/features`, label: t("nav.features") },
-  { href: `/${lang}/pricing`, label: t("nav.pricing") },
-  //    { href: `/${lang}/solutions`, label: t('nav.solutions') }
+  { href: localizedHref(lang, "/"), label: t("nav.home") },
+  { href: localizedHref(lang, "/features"), label: t("nav.features") },
+  { href: localizedHref(lang, "/pricing"), label: t("nav.pricing") },
+  //    { href: localizedHref(lang, "/solutions"), label: t('nav.solutions') }
 ];
 
 // Language switcher links - preserve the current path structure
@@ -18,7 +25,7 @@ const getLocalizedPath = (targetLang: string) => {
   const pathWithoutLang = currentPath.replace(/^\/(de|en)/, "") || "/";
   // Avoid double-slash when pathWithoutLang is "/" (root)
   const suffix = pathWithoutLang === "/" ? "" : pathWithoutLang;
-  return `/${targetLang}${suffix}`;
+  return localizedHref(targetLang as keyof typeof import("../i18n").ui, suffix || "/");
 };
 ---
 
@@ -33,7 +40,7 @@ const getLocalizedPath = (targetLang: string) => {
               <li class="nav__item">
                 <a
                   href={item.href}
-                  class={`nav__link ${currentPath === item.href ? "nav__link--active" : ""}`}
+                  class={`nav__link ${currentPath.replace(/\/$/, "") === item.href.replace(/\/$/, "") ? "nav__link--active" : ""}`}
                 >
                   {item.label}
                 </a>

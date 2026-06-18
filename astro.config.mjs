@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
+    // site: 'https://sozialcm.de',
     devToolbar: {
         enabled: false
     },
@@ -10,8 +11,7 @@ export default defineConfig({
         defaultLocale: 'de',
         locales: ['de', 'en'],
         routing: {
-            prefixDefaultLocale: true,
-            redirectToDefaultLocale: true
+            prefixDefaultLocale: false
         }
     },
     env: {

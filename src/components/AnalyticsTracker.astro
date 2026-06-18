@@ -47,8 +47,13 @@ document.addEventListener('change', (event) => {
         
         // Extract new language from path
         let newLang = 'en';
-        if (newPath.startsWith('/de')) newLang = 'de';
-        else if (newPath.startsWith('/fr')) newLang = 'fr';
+        if (newPath === '' || newPath === '/' || newPath.startsWith('/?') || newPath === '/index.html') {
+            newLang = 'de';
+        } else if (newPath.startsWith('/de')) {
+            newLang = 'de';
+        } else if (newPath.startsWith('/fr')) {
+            newLang = 'fr';
+        }
         
         trackLanguageChange(currentLang, newLang);
     }
